@@ -1,0 +1,12 @@
+Der MySQL-Container: Wird verwendet, um die Daten der Webanwendung zu speichern und stellt die erforderliche Datenbankfunktionalität bereit.
+
+Der PHP-Container: Wird verwendet, um die PHP-Anwendung auszuführen, die auf den Daten in der MySQL-Datenbank zugreift, um dynamische Inhalte zu generieren.
+ 
+Der NGinx-Container: Wird verwendet, um HTTP-Anforderungen von Benutzern zu empfangen und an den PHP-Container weiterzuleiten, um die Antwort zurückzugeben.
+
+Jeder Container wird als Docker-Service definiert und enthält Konfigurationsoptionen wie das Basisimage, die Umgebungsvariablen und die Abhängigkeiten. 
+Die depends_on-Optionen werden verwendet, um die Abhängigkeiten zwischen den Containern festzulegen und sicherzustellen, dass sie in der richtigen Reihenfolge gestartet werden.
+Das volumes-Attribut wird verwendet, um Dateien zwischen dem Host-System und den Containern zu teilen und sicherzustellen, dass Änderungen an Dateien in Echtzeit innerhalb der Container sichtbar sind. 
+Der ports-Attribut wird verwendet, um die Ports zwischen dem Host-System und den Containern zu verknüpfen, damit Benutzer auf die Anwendung zugreifen können.
+
+
